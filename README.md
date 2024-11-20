@@ -1,4 +1,4 @@
-# Gnosis Safe Owner Manager
+# Safe Owner Manager
 
 A tool to manage (Gnosis) Safe multisig owners and thresholds in bulk.
 
