@@ -1,0 +1,40 @@
+{
+  "name": "safe-owner-manager",
+  "version": "1.0.0",
+  "description": "A tool to manage (Gnosis) Safe multisig owners and thresholds in bulk.",
+  "main": "lib/index.js",
+  "bin": {
+    "safe-owner-manager": "bin/cli.js"
+  },
+  "scripts": {
+    "start": "node bin/cli.js"
+  },
+  "keywords": [
+    "gnosis",
+    "safe",
+    "multisig",
+    "ethereum",
+    "owner",
+    "threshold",
+    "management"
+  ],
+  "author": "Gonçalo Sá <goncalo05@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "ethers": "^6.0.0",
+    "keccak256": "^1.0.6",
+    "minimist": "^1.2.8"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GNSPS/safe-owner-manager.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GNSPS/safe-owner-manager/issues"
+  },
+  "homepage": "https://github.com/GNSPS/safe-owner-manager#readme"
+}
