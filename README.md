@@ -1,5 +1,7 @@
 # Safe Owner Manager
 
+_**PLEASE BE SURE TO ALWAYS CHECK THE JSON OUTPUT BY HAND AND BY SIMULATING IT IN TENDERLY, CHECKING STATE CHANGES BEFORE EXECUTING ANY TRANSACTIONS!!!_**
+
 A tool to manage (Gnosis) Safe multisig owners and thresholds in bulk.
 
 The output of the tool is a JSON file (or variable) that can then be used in Safe's Transaction Builder plugin, after initiating a new transaction in the Safe UI:
