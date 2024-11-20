@@ -1,6 +1,10 @@
 # Gnosis Safe Owner Manager
 
-A tool to manage Gnosis Safe multisig owners and thresholds.
+A tool to manage (Gnosis) Safe multisig owners and thresholds in bulk.
+
+The output of the tool is a JSON file (or variable) that can then be used in Safe's Transaction Builder plugin, after initiating a new transaction in the Safe UI:
+
+<img width="1376" alt="Xnapper-2024-11-20-16 42 20" src="https://github.com/user-attachments/assets/6c0dba68-b517-456a-af28-7ae24e7f95c2">
 
 ## Installation
 
