@@ -8,6 +8,8 @@ The output of the tool is a JSON file (or variable) that can then be used in Saf
 
 <img width="1376" alt="Xnapper-2024-11-20-16 42 20" src="https://github.com/user-attachments/assets/6c0dba68-b517-456a-af28-7ae24e7f95c2">
 
+There is also a branch with Levenshtein distance algorithm version of this tool. However, given we have the threshold in addition to the addresses sets, it isn't as good as the current naive version.
+
 ## Installation
 
 Install globally to use as a CLI tool:
