@@ -13,31 +13,31 @@ The output of the tool is a JSON file (or variable) that can then be used in Saf
 Install globally to use as a CLI tool:
 
 ```bash
-npm install -g gnosis-safe-owner-manager
+npm install -g safe-owner-manager
 ```
 
 Or install locally in your project:
 
 ```bash
-npm install gnosis-safe-owner-manager
+npm install safe-owner-manager
 ```
 
 ## CLI Usage
 
 ```bash
-gnosis-safe-owner-manager --safe-address=SAFE_ADDRESS --new-owners=NEW_OWNER_1,NEW_OWNER_2,... --chain-id=CHAIN_ID --alchemy-api-key=ALCHEMY_API_KEY [--new-threshold=NEW_THRESHOLD]
+safe-owner-manager --safe-address=SAFE_ADDRESS --new-owners=NEW_OWNER_1,NEW_OWNER_2,... --chain-id=CHAIN_ID --alchemy-api-key=ALCHEMY_API_KEY [--new-threshold=NEW_THRESHOLD]
 ```
 
 ### Example:
 
 ```bash
-gnosis-safe-owner-manager --safe-address=0xYourSafeAddress --new-owners=0xOwner1,0xOwner2 --chain-id=1 --alchemy-api-key=YourAlchemyApiKey --new-threshold=2
+safe-owner-manager --safe-address=0xYourSafeAddress --new-owners=0xOwner1,0xOwner2 --chain-id=1 --alchemy-api-key=YourAlchemyApiKey --new-threshold=2
 ```
 
 ## Library Usage
 
 ```javascript
-const { generateTransactions } = require('gnosis-safe-owner-manager');
+const { generateTransactions } = require('safe-owner-manager');
 
 const options = {
   safeAddress: '0xYourSafeAddress',
