@@ -1,6 +1,6 @@
 {
   "name": "safe-owner-manager",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tool to manage (Gnosis) Safe multisig owners and thresholds in bulk.",
   "main": "lib/index.js",
   "bin": {
