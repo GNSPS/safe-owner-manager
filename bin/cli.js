@@ -8,7 +8,7 @@ import fs from 'fs';
 
 // Process command-line arguments with minimist, specifying string arguments
 const args = minimist(process.argv.slice(2), {
-  string: ['safe-address', 'new-owners', 'chain-id', 'new-threshold', 'alchemy-api-key', 'out-filename'],
+  string: ['safe-address', 'new-owners', 'chain-id', 'new-threshold', 'alchemy-api-key', 'rpc-url', 'out-filename'],
 });
 
 // Extract parameters
@@ -17,11 +17,12 @@ const newOwnersInput = args['new-owners'];
 const chainId = args['chain-id'];
 const newThreshold = args['new-threshold'] ? parseInt(args['new-threshold'], 10) : null;
 const alchemyApiKey = args['alchemy-api-key'] || process.env.ALCHEMY_API_KEY;
+const rpcUrl = args['rpc-url'];
 const outFilename = args['out-filename'] ? args['out-filename'] : `transactions_chain-${chainId}_${safeAddress}.json`;
 
 // Usage message
-if (!safeAddress || !newOwnersInput || !chainId || !alchemyApiKey) {
-  console.log('Usage: gnosis-safe-owner-manager --safe-address=SAFE_ADDRESS --new-owners=NEW_OWNER_1,NEW_OWNER_2,... --chain-id=CHAIN_ID [--new-threshold=NEW_THRESHOLD] --alchemy-api-key=ALCHEMY_API_KEY [--out-filename=FILENAME]');
+if (!safeAddress || !newOwnersInput || !chainId) {
+  console.log('Usage: gnosis-safe-owner-manager --safe-address=SAFE_ADDRESS --new-owners=NEW_OWNER_1,NEW_OWNER_2,... --chain-id=CHAIN_ID [--new-threshold=NEW_THRESHOLD] [--alchemy-api-key=ALCHEMY_API_KEY] [--rpc-url=RPC_URL] [--out-filename=FILENAME]');
   process.exit(1);
 }
 
@@ -35,6 +36,7 @@ generateTransactions({
   chainId,
   newThreshold,
   alchemyApiKey,
+  rpcUrl,
 })
   .then(jsonOutput => {
     // Output JSON to file
